@@ -47,13 +47,11 @@ public class CompletablefutureTest {
             System.out.println("开始核销优惠券");
             try {
                 Thread.sleep(1000);
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             return "核销优惠券成功";
         });
-
         CompletableFuture<String> notifyServer = CompletableFuture.supplyAsync(() -> {
             System.out.println("开始发送短信");
             try {
